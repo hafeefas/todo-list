@@ -2,3 +2,14 @@
   text-align: center;
 }
 
+.low-priority {
+  background-color: yellow;
+}
+
+.medium-priority {
+  background-color: green;
+}
+
+.high-priority {
+  background-color: red;
+}
