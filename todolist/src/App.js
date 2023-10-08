@@ -11,8 +11,8 @@ function App() {
   const addItem = () => {
 
     //before adding an item input, let's make sure the user has typed in something first:
-    if (!newItem) {
-      alert("Enter an item")
+    if (!newItem || !addedDate) {
+      alert("Enter an item and a complete date")
       return;
     }
 
@@ -49,7 +49,7 @@ function App() {
         type="date"
         placeholder='Add a due date...'
         value={addedDate}
-        onChange={(e) => { e.target.value() }}
+        onChange={(e) => setAddedDate(e.target.value)}
 
       />
       <button onClick={() => addItem()}> Add </button>
@@ -57,7 +57,8 @@ function App() {
       <ul>
         {items.map(item => {
           return (
-            <li key={item.id}> {item.value}
+            <li key={item.id}> 
+              {item.value} ({item.date})
               <button onClick={() => deleteItem(item.id)}> delete </button>
             </li>
           )
