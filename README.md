@@ -2,6 +2,12 @@
 
 This is a simple to-do list application built with React. Users can add, edit, delete, and mark tasks as completed.
 
+# Screenshot
+
+<img width="1276" alt="Screenshot 2023-10-08 045442" src="https://github.com/hafeefas/todo-list/assets/99234946/5a57913f-9140-4e22-9314-8f13f17a65f9">
+
+# Site Link
+https://hafeefas.github.io/todo-list/
 
 ## Features
 
