@@ -29,11 +29,11 @@ To install the project, follow these steps:
 
    ```shell
    git clone https://github.com/your-username/react-todo-list.git
-``
+```
 Navigate to the project directory:
    1- cd todo-list
    2- npm install
    3- npm start
    This will start the development server, and you can access the app in your web browser at http://localhost:3000.
-  
+  ```
    
