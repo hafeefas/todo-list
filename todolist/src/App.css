@@ -8,6 +8,8 @@ body{
   background-size: cover; 
   position: relative;
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  height: 100vh; /* Set height to fill the viewport */
+  overflow: hidden; /* Hide overflow content */
 }
 
 .header{
@@ -28,7 +30,7 @@ body{
 }
 /* e53170 */
 .high-priority {
-  background-color: #f70459;
+  background-color: #f71c68;
 }
 /* Style for the pop-up */
 .popup {
