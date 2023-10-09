@@ -34,7 +34,7 @@ To install the project, follow these steps:
 1. Clone the repository:
 
    ```shell
-   git clone https://github.com/your-username/react-todo-list.git
+   git clone https://github.com/hafeefas/-todo-list.git
 ```
 Navigate to the project directory:
    1- cd todo-list
