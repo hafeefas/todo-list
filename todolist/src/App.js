@@ -13,11 +13,42 @@ function App() {
   const MEDIUM_PRIORITY = 'medium';
   const HIGHEST_PRIORITY = 'high';
 
+  const [initialItem, setInitialItem] = useState([
+    {
+      id: 1,
+      value: 'Wash Dishes',
+      date: '2023-10-10',
+      completed: false,
+      priority: LOWEST_PRIORITY,
+    },
+    {
+      id: 2,
+      value: 'Study for test',
+      date: '2023-10-15',
+      completed: false,
+      priority: MEDIUM_PRIORITY,
+    },
+    {
+      id: 3,
+      value: 'Update Resume',
+      date: '2023-10-20',
+      completed: false,
+      priority: HIGHEST_PRIORITY,
+    },
+  ]);
+
+  // Use useEffect to initialize the items state with initialItem when the component mounts
+  useEffect(() => {
+    setItems(initialItem);
+  }, []);
+
+  // Rest of your component code...
+
   // helper functions
   const addItem = () => {
-    //before adding an item input, make sure the user has typed in something first:
+    // Before adding an item input, make sure the user has typed in something first:
     if (!newItem || !addedDate) {
-      alert('Enter an item and a complete date');
+      alert('Enter an item and a completion date');
       return;
     }
 
@@ -29,19 +60,19 @@ function App() {
       priority: selectedPriority,
     };
 
-    // cloning the old list as well as the newly added list to update the list of items
+    // Cloning the old list as well as the newly added list to update the list of items
     setItems((oldList) => [...oldList, item]);
 
-    // clears input fields after adding the item as done in the above line of code
+    // Clears input fields after adding the item as done in the above line of code
     setNewItem('');
     setAddedDate('');
   };
 
   const toggleCompleted = (id) => {
-    // map over the items that already exist
+    // Map over the items that already exist
     const updatedItems = items.map((item, index) => {
       if (item.id === id) {
-        // if the item ID is a match with the click item's ID
+        // If the item ID is a match with the clicked item's ID
         const updatedItem = { ...item, completed: !item.completed };
 
         // Toggle the popup for this item
@@ -59,7 +90,7 @@ function App() {
       }
       return item;
     });
-    // updates the list of items and the checkboxes
+    // Updates the list of items and the checkboxes
     setItems(updatedItems);
   };
 
@@ -89,7 +120,7 @@ function App() {
     setItems(newArray);
   };
 
-  // handle the selected priority dropdown change
+  // Handle the selected priority dropdown change
   const handlePriorityChange = (e) => {
     setSelectedPriority(e.target.value);
   };
