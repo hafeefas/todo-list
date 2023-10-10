@@ -9,7 +9,6 @@ body{
   position: relative;
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   height: 100vh; /* Set height to fill the viewport */
-  overflow: hidden; /* Hide overflow content */
 }
 
 .header{
