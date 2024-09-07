@@ -1,6 +1,6 @@
 # todo-list
 
-This is a simple to-do list application built with React. Users can add, edit, delete, and mark tasks as completed.
+This is a to-do list application built with React. Users can add, edit, delete, and mark tasks as completed.
 
 # Screenshot
 
